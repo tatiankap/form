@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form-field {
+            display: flex;
+            margin-bottom: 1rem;
+        }
+
+        .form-control {
+            display: block;
+            width: 100%;
+            padding: 0.375rem 0.75rem;
+            margin-right: 10px;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        }
+
+        .form-check {
+            position: relative;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            font-weight: 400;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            user-select: none;
+            border: 1px solid transparent;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: 0.25rem;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .has-error {
+            border-color: red;
+        }
+
+        .d-none {
+            display: none;
+        }
+
+        .table {
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 1rem;
+            background-color: transparent;
+            border-spacing: 2px;
+            border-color: gray;
+            border: 1px solid #dee2e6;
+        }
+        .table td{
+            border: 1px solid #dee2e6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form class="form">
+        <div class="form-field">
+            <input class="form-control" type="text" name="name" placeholder="Your name">
+            <small></small>
+            <input class="form-control" type="text" name="surname" placeholder="Your surname">
+            <small></small>
+        </div>
+        <div class="form-field">
+            <input class="form-control" type="text" name="birth" placeholder="Your birth date">
+            <small></small>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="sex" value="male" id="male" checked>
+            <label for="male">male</label>
+
+            <input class="form-check-input" type="radio" name="sex" value="female" id="female">
+            <label for="female">female</label>
+        </div>
+        <div class="form-field">
+            <select class="form-control " name="city" id="city">
+                <option value="kyiv" selected>Kyiv</option>
+                <option value="vinnitsa">Vinnitsa</option>
+                <option value="odessa">Odessa</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="form-field">
+            <textarea name="address" id="address" cols="30" rows="10"></textarea>
+        </div>
+        <div class="form-check">
+            <label for="js"> <input type="checkbox" name="lang" value="js" id="lang">JavaScript</label>
+            <label for="java"><input type="checkbox" name="lang" value="java" id="lang">Java</label>
+            <label for="php"><input type="checkbox" name="lang" value="php" id="lang">PHP</label>
+        </div>
+        <button class="btn" type="submit">Save</button>
+    </form>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
